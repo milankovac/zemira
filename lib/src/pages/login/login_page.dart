@@ -24,6 +24,8 @@ class LoginPage extends StatelessWidget {
         ),
       ),
       child: Scaffold(
+          //stop scroll
+          resizeToAvoidBottomInset: false,
           backgroundColor: Colors.transparent,
           body: ListView(
             physics: const BouncingScrollPhysics(),

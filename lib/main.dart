@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:zemira/src/pages/login/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:zemira/src/pages/register/register_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           title: 'Zemira',
-          home: RegisterPage(),
+          home: LoginPage(),
         );
       }
   }

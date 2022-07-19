@@ -8,7 +8,7 @@ class LoginTtile extends StatelessWidget {
     return  Container(
       margin: const EdgeInsets.only(top: 100),
       child: const Center(
-        child: Text('Hello!',style: TextStyle(
+        child: Text('Login',style: TextStyle(
           fontSize: 36,
            letterSpacing: 1,
           color: AppColors.fadedGray,

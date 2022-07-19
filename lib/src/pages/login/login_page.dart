@@ -10,11 +10,22 @@ import 'package:zemira/src/pages/login/widgets/login_username_field.dart';
 import 'package:zemira/src/pages/login/widgets/login_with_google_button.dart';
 import 'package:zemira/src/utils/app_colors.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  LoginPage({Key? key}) : super(key: key);
 
   @override
+  State<LoginPage> createState() => _LoginPageState();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController userNameController = TextEditingController();
+  var username = '';
+  var password = '';
+  @override
   Widget build(BuildContext context) {
+    final form = widget._formKey.currentState;
     return Container(
       decoration: const BoxDecoration(
         color: AppColors.backgroundColor,
@@ -29,16 +40,28 @@ class LoginPage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           body: ListView(
             physics: const BouncingScrollPhysics(),
-            children: const [
-              LoginTtile(),
-              LoginSubtitle(),
-              LoginUsernameField(),
-              LoginPasswordField(),
-              LoginForgotPassword(),
-              LoginButton(),
-              LoginOrContinue(),
-              LoginWithGoogleButton(),
-              LoginRegisterNow()
+            children: [
+              const LoginTtile(),
+              const LoginSubtitle(),
+              Form(
+                  key: widget._formKey,
+                  onChanged: () => {
+                        setState(() {
+                          password = passwordController.text;
+                          username = userNameController.text;
+                        }),
+                      },
+                  child: Column(
+                    children: [
+                      LoginUsernameField(userNameController),
+                      LoginPasswordField(passwordController),
+                    ],
+                  )),
+              const LoginForgotPassword(),
+              LoginButton(username, password),
+              const LoginOrContinue(),
+              const LoginWithGoogleButton(),
+              const LoginRegisterNow()
             ],
           )),
     );

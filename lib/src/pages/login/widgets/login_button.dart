@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zemira/src/utils/app_colors.dart';
 
 class LoginButton extends StatelessWidget {
-  const LoginButton({Key? key}) : super(key: key);
+  final dynamic username, password;
+  const LoginButton(this.username, this.password);
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +14,9 @@ class LoginButton extends StatelessWidget {
           color: AppColors.lightGreen,
         ),
         margin: const EdgeInsets.only(left: 25, right: 25, top: 45),
-        child: const TextButton(
-            onPressed: null,
-            child: Text(
+        child:  TextButton(
+            onPressed: () => {},
+            child: const Text(
               'Login',
               style: TextStyle(
                   color: AppColors.darkerGreen,

@@ -6,7 +6,7 @@ class RegisterTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      margin: const EdgeInsets.only(top: 100),
+      margin: const EdgeInsets.only(top: 150),
       child: const Center(
         child: Text('Registration',style: TextStyle(
           fontSize: 36,

@@ -26,7 +26,7 @@ class RegisterHaveAccount extends StatelessWidget {
       },
       child: Container(
         alignment: Alignment.center,
-        margin: const EdgeInsets.only(top: 200),
+        margin: const EdgeInsets.only(top: 150),
         child: RichText(
           text: const TextSpan(
             text: 'Already have an account?',

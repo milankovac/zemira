@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "73383332613",
+    "project_id": "zemira-3d89e",
+    "storage_bucket": "zemira-3d89e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73383332613:android:0b60f9c36ad4129609056c",
+        "android_client_info": {
+          "package_name": "com.example.zemira"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73383332613-nibc554ubiaq7n7t3rp5flmolaurkpgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs4NhUCp4RvcU-v7c12hZOXpeh3w6LLHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73383332613-nibc554ubiaq7n7t3rp5flmolaurkpgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

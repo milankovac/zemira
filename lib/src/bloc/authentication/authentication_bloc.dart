@@ -2,6 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:zemira/src/controllers/login_controller.dart';
+import 'package:zemira/src/pages/home/home_page.dart';
+import 'package:zemira/src/utils/router.dart';
 import 'package:zemira/src/utils/snack_bars/error_sneck_bar.dart';
 
 part 'authentication_event.dart';
@@ -16,8 +18,9 @@ class AuthenticationBloc
       try {
         await LoginController(event.username, event.password).proced();
         emit(AuthenticatedState());
+        routerFade(context, HomePage());
       } on FirebaseAuthException catch (_) {
-         emit(UnauthenticatedState());
+        emit(UnauthenticatedState());
         errorSneckBar(context, 'The username or password is incorrect');
       }
     });

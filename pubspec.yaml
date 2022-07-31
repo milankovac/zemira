@@ -40,6 +40,7 @@ dependencies:
   page_transition: ^2.0.9
   firebase_auth: ^3.5.0
   shared_preferences: ^2.0.15
+  dot_navigation_bar: ^1.0.1+4
 
 dev_dependencies:
   flutter_test:

@@ -25,7 +25,6 @@ class _LoginPageState extends State<LoginPage> {
   var password = '';
   @override
   Widget build(BuildContext context) {
-    final form = widget._formKey.currentState;
     return Container(
       decoration: const BoxDecoration(
         color: AppColors.backgroundColor,

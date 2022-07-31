@@ -12,8 +12,8 @@ void main() async {
   //Fullscreen config
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   //No rotate screan config
-  SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+   //Firebase initialize
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AuthenticationBloc(context),
+      create: (context) => AuthenticationBloc(context)..add(AutoLoginEvent()),
       child: MaterialApp(
         theme: ThemeData(fontFamily: GoogleFonts.poppins().fontFamily),
         debugShowCheckedModeBanner: false,
@@ -36,8 +36,7 @@ class MyApp extends StatelessWidget {
             if (state is AuthenticatedState) {
               return HomePage();
             }
-               return LoginPage(); 
-
+            return LoginPage();
           },
         ),
       ),

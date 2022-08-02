@@ -1,6 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:zemira/src/utils/app_colors.dart';
 
 class HomeTitle extends StatelessWidget {

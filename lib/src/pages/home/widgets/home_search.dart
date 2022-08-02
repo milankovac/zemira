@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:searchfield/searchfield.dart';
 import 'package:zemira/src/utils/app_colors.dart';
